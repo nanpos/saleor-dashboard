@@ -1,6 +1,6 @@
 import backgroundArt from "@assets/images/login-background.svg";
-import saleorDarkLogo from "@assets/images/logo-dark.svg";
-import saleorLightLogo from "@assets/images/logo-light.svg";
+import deneaDarkLogo from "@assets/images/logo-denea-dark.svg";
+import deneaLightLogo from "@assets/images/logo-denea-light.svg";
 import { makeStyles, useTheme } from "@saleor/macaw-ui";
 import React from "react";
 import SVG from "react-inlinesvg";
@@ -79,10 +79,12 @@ const Layout: React.FC = props => {
   return (
     <div className={classes.root}>
       <div className={classes.mainPanel}>
-        <SVG
-          className={classes.logo}
-          src={themeType === "dark" ? saleorDarkLogo : saleorLightLogo}
-        />
+        <div className="logo-container">
+          <SVG
+            className={classes.logo}
+            src={themeType === "dark" ? deneaDarkLogo : deneaLightLogo}
+          />
+        </div>
         <div className={classes.mainPanelContent}>{children}</div>
       </div>
       <div className={classes.sidebar}>
